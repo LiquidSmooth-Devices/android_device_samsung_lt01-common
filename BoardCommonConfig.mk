@@ -31,6 +31,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # exFAT kernel support
 KERNEL_EXFAT_MODULE_NAME := "exfat"
 
+# Camera HAL
+SAMSUNG_EXYNOS_HARDWARE:= true
+
 # Graphics
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := false
 
