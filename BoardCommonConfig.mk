@@ -53,6 +53,9 @@ BOARD_EXYNOS4X12_TABLET_HAS_LED_BUTTONS := true
 # inherit from the proprietary version
 -include vendor/samsung/lt01-common/BoardConfigVendor.mk
 
+# External apps on SD
+TARGET_EXTERNAL_APPS = sdcard1
+
 # Selinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/lt01-common/selinux
