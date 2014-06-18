@@ -34,9 +34,6 @@ KERNEL_EXFAT_MODULE_NAME := "exfat"
 # Camera HAL
 SAMSUNG_EXYNOS_HARDWARE:= true
 
-# Graphics
-TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := false
-
 # Recovery
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 BOARD_RECOVERY_SWIPE := true
@@ -45,10 +42,13 @@ BOARD_RECOVERY_SWIPE := true
 BOARD_USE_LEGACY_SENSORS_FUSION := false
 
 # Legacy driver compatibility
-COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
+# COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Button backlight
 BOARD_EXYNOS4X12_TABLET_HAS_LED_BUTTONS := true
+
+# Skip droiddoc build to save build time
+BOARD_SKIP_ANDROID_DOC_BUILD := true
 
 # inherit from the proprietary version
 -include vendor/samsung/lt01-common/BoardConfigVendor.mk
